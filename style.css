@@ -96,6 +96,22 @@ h3 {
   background-color: var(--accent);
   mask-repeat: no-repeat;
   mask-position: 0px 0px;
+  z-index: 11;
+}
+.nav--open {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  grid-area: 1 / 3 / 2 / 4;
+  mask: url(img/x.svg);
+  mask-size: 2rem;
+  background-color: var(--main);
+  mask-repeat: no-repeat;
+  mask-position: 0px 0px;
+  z-index: 11;
 }
 .nav:hover {
   background-color: var(--white);
@@ -117,7 +133,7 @@ h3 {
 }
 
 a {
-  margin-right: 1.2rem;
+  margin-right: 2rem;
   margin-bottom: 2rem;
   text-decoration: none;
   color: var(--main);
@@ -129,13 +145,30 @@ a:hover {
 /* Hero / Portfolio */
 .hero {
   grid-area: 2 / 1 / 4 / 4;
+  display: grid;
+  place-content: center;
 }
-/* Bottom / Contact */
+.portfolio {
+  background-color: var(--accent);
+  padding: 1.5rem;
+  height: fit-content;
+}
+#portfolio--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#portfolio--card p {
+  padding-top: 1rem;
+  font-size: var(--scaleFontSize);
+  color: var(--main);
+}
+.read--more {
+  z-index: 12;
+}
+/* Bottom / Contact / Fancy h1s*/
 .bottom {
   grid-area: 4 / 1 / 5 / 4;
-  /* background-image: url(img/ContactMe.svg);
-  background-repeat: no-repeat;
-  background-position: 160px 130px; */
   background-color: var(--accent);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -198,4 +231,12 @@ a:hover {
 
 .hidden {
   display: none;
+}
+
+button {
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
