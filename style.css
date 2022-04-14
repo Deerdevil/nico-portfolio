@@ -157,6 +157,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 15rem;
 }
 #portfolio--card p {
   padding-top: 1rem;
@@ -165,6 +166,13 @@ a:hover {
 }
 .read--more {
   z-index: 12;
+}
+.portfolio--content--1 {
+  mask-image: url(img/youtube.jpg);
+  mask-size: 100%;
+  object-fit: cover;
+  mask-position: 0px 0px;
+  mask-repeat: no-repeat;
 }
 /* Bottom / Contact / Fancy h1s*/
 .bottom {
