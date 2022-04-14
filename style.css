@@ -201,10 +201,12 @@ a:hover {
   padding-right: 1rem;
 } */
 
-.portfolio--img {
+.portfolio--img img {
+  border: 1px solid var(--accent);
   object-fit: cover;
-  height: 200px;
+  height: 150px;
   width: 200px;
+  margin-bottom: 0.5rem;
 }
 /* Bottom / Contact / Fancy h1s*/
 .bottom {
