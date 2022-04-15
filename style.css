@@ -248,6 +248,16 @@ a:hover {
   bottom: -19px;
   z-index: 10;
 }
+.read--more::before {
+  content: "";
+  border: 1px solid var(--accent);
+  width: 200%;
+  height: 290px;
+  position: absolute;
+  left: -50%;
+  bottom: 50%;
+  z-index: -10;
+}
 .portfolio--content--1 {
 }
 /* .portfolio::after {
@@ -347,9 +357,10 @@ a:hover {
 button {
   cursor: pointer;
   background: none;
-  background-color: var(--main);
+  background-color: var(--accent);
   border: 1px solid var(--accent);
-  color: var(--accent);
+  color: var(--main);
   padding-left: 1rem;
   padding-right: 1rem;
+  z-index: 11;
 }
