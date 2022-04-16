@@ -159,6 +159,10 @@ h3 {
   background-color: var(--main);
   mask-repeat: no-repeat;
   mask-position: 0px 0px;
+  -webkit-mask: url(img/x.svg);
+  -webkit-mask-size: 2rem;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: 0px 0px;
   z-index: 100;
 }
 .bio--open {
