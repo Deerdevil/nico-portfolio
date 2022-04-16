@@ -141,6 +141,7 @@ h3 {
   -webkit-mask-image: url(img/hamburger.svg);
   background-color: var(--accent);
   mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 0px 0px;
   mask-position: 0px 0px;
   z-index: 11;
