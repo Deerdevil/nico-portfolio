@@ -6,6 +6,7 @@ const bioClose = document.querySelector(".bio--open");
 const openNav = document.querySelector(".nav");
 const navMenu = document.querySelector(".nav--menu");
 const navClose = document.querySelector(".nav--open");
+const hero = document.querySelector(".read--more");
 //About me
 bioButton.addEventListener("click", function () {
   aboutMe.classList.add("about--me--mask--clicked");

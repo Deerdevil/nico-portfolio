@@ -50,7 +50,6 @@ h3 {
 .main--container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: repeat(4, 1fr); */
   grid-template-rows: 6rem 1fr 1fr 1fr;
   height: 100vh;
   width: 100vw;
@@ -113,11 +112,14 @@ h3 {
   font-style: italic;
   padding: 1rem;
   margin-left: 1rem;
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 .about--me--modal > p {
   padding: 1rem;
   margin-left: 1rem;
-  font-size: 1.2rem;a
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 .about--me--img {
   background-image: url(img/nicoCover.png);
@@ -127,6 +129,13 @@ h3 {
   object-fit: cover;
   height: 20vh;
   width: 100vw;
+}
+.about--me--header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: var(--accent);
 }
 /* Navigation */
 .nav {
@@ -166,13 +175,13 @@ h3 {
   z-index: 100;
 }
 .bio--open {
+  /* X on the modal */
   cursor: pointer;
   position: absolute;
   top: 15px;
   right: 0px;
   width: 50px;
   height: 50px;
-
   mask: url(img/x.svg);
   mask-size: 2rem;
   background-color: var(--main);
@@ -203,14 +212,6 @@ h3 {
   align-items: center;
 }
 
-a {
-  margin-bottom: 2rem;
-  text-decoration: none;
-  color: var(--main);
-}
-a:hover{
-  color: var(--white);
-}
 /* Hero / Portfolio */
 .hero {
   grid-area: 2 / 1 / 4 / 4;
@@ -245,7 +246,7 @@ a:hover{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 #portfolio--card::-webkit-scrollbar {
   display: none;
@@ -271,6 +272,56 @@ a:hover{
   /* align-self: flex-start; */
   /* padding-left: 1.5rem; */
   margin: 0;
+}
+.modal--portfolio {
+  background-color: var(--main);
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  color: var(--white);
+  overflow: hidden;
+  margin: 0;
+}
+.portfolio--flex {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+.modal--portfolio a {
+  color: var(--accent);
+}
+.modal--portfolio a:hover {
+  color: var(--main);
+}
+
+.modal--portfolio p {
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.port--links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.portfolio--img--1 {
+  background-image: url(img/rps.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -140px;
+  object-fit: fill;
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  align-self: flex-start;
+}
+.portfolio--img--1 h2 {
+  color: var(--main);
 }
 /* Card 2 */
 #portfolio--card--1 {
@@ -310,10 +361,49 @@ a:hover{
   /* padding-left: 1.5rem; */
   margin: 0;
 }
+/* Card 3 */
+#portfolio--card--2 {
+  scroll-snap-align: start;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  height: fit-content;
+  width: 100vw;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  position: relative;
+  /* border: 1px solid var(--accent); */
+  /* z-index: 1; */
+}
+#portfolio--card--2::before {
+  content: "Swipe me";
+  font-family: var(--font-drawn);
+  font-size: 1rem;
+  position: absolute;
+  /* transform: rotate(-90deg); */
+  top: -20px;
+  /* left: 30px; */
+  color: var(--accent);
+  z-index: -10;
+}
+#portfolio--card--2 p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+#portfolio--card--2 h5 {
+  color: var(--accent);
+  /* align-self: flex-start; */
+  /* padding-left: 1.5rem; */
+  margin: 0;
+}
+
 .read--more {
   position: absolute;
   bottom: -19px;
-  z-index: 10;
+  z-index: -1;
 }
 .read--more::before {
   content: "";
@@ -325,17 +415,6 @@ a:hover{
   bottom: 50%;
   z-index: -10;
 }
-.portfolio--content--1 {
-}
-/* .portfolio::after {
-  position: absolute;
-  content: "Read more";
-  background-color: var(--main);
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  padding-left: 1rem;
-  padding-right: 1rem;
-} */
 
 .portfolio--img img {
   border: 1px solid var(--accent);
@@ -345,15 +424,7 @@ a:hover{
   margin-bottom: 0.5rem;
   position: relative;
 }
-/* .portfolio--img::after {
-  content: "";
-  border: 1px solid var(--accent);
-  width: 350px;
-  height: 100%;
-  left: 5.5rem;
-  top: 0;
-  position: absolute;
-} */
+
 /* Bottom / Contact / Fancy h1s*/
 .bottom {
   grid-area: 4 / 1 / 5 / 4;
@@ -442,3 +513,11 @@ li {
   margin: 0;
 }
 
+a {
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: var(--main);
+}
+a:hover {
+  color: var(--white);
+}
