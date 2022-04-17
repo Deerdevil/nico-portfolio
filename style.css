@@ -208,7 +208,9 @@ a {
   text-decoration: none;
   color: var(--main);
 }
-
+a:hover{
+  color: var(--white);
+}
 /* Hero / Portfolio */
 .hero {
   grid-area: 2 / 1 / 4 / 4;
@@ -388,7 +390,7 @@ a {
 .bottom--txt--top > h1 {
   padding: 0;
   color: var(--accent);
-  margin-bottom: -1.4rem;
+  margin-bottom: -1.45rem;
   margin-left: 1rem;
   /* position: absolute; */
 }
@@ -402,7 +404,7 @@ a {
 }
 .bottom--txt--bot > h1 {
   margin-left: 1.2rem;
-  margin-top: -1.7rem;
+  margin-top: -1.8rem;
   color: var(--main);
 }
 .contact--txt > h3 {
@@ -439,3 +441,4 @@ ul {
 li {
   margin: 0;
 }
+
