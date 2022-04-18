@@ -32,8 +32,6 @@ bioClose.addEventListener("click", function () {
   setTimeout(() => {
     aboutMe.classList.remove("hidden");
   }, 500);
-
-  // aboutMe.classList.remove("about--me--mask");
   bioButton.style.display = "";
 });
 
@@ -45,7 +43,7 @@ openNav.addEventListener("click", function () {
 navClose.addEventListener("click", function () {
   navMenu.classList.add("hidden");
 });
-
+//Open project modals
 projectOne.addEventListener("click", function () {
   projectOneOpen.classList.remove("hidden");
 });
@@ -55,19 +53,13 @@ projectTwo.addEventListener("click", function () {
 projectThree.addEventListener("click", function () {
   projectThreeOpen.classList.remove("hidden");
 });
-// projectTwo.addEventListener("click", function () {
-//   projectTwoOpen.classList.remove("hidden");
-// });
-
-projectClose.addEventListener("click", function (e) {
+//Close project modals
+projectClose.addEventListener("click", function () {
   projectClose.parentElement?.classList.add("hidden");
-  console.log(e);
 });
-projectClose2.addEventListener("click", function (e) {
+projectClose2.addEventListener("click", function () {
   projectClose2.parentElement?.classList.add("hidden");
-  console.log(e);
 });
-projectClose3.addEventListener("click", function (e) {
+projectClose3.addEventListener("click", function () {
   projectClose3.parentElement?.classList.add("hidden");
-  console.log(e);
 });
