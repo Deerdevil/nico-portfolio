@@ -111,7 +111,7 @@ h3 {
 }
 
 .about--me--modal {
-  z-index: 110;
+  z-index: 90;
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -166,7 +166,7 @@ h3 {
   }
   .me--txt {
     background-position: 200px 40px;
-    z-index: 96f;
+    z-index: 96;
   }
   .about--me--modal {
     z-index: 100;
