@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200;400;700&family=Permanent+Marker&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@200;400;700&family=Permanent+Marker&display=swap');
 :root {
   --accent: #e87449;
   --main: #1c223c;
   --white: #dbe8ed;
 
-  --font-drawn: "Permanent Marker", cursive;
+  --font-drawn: 'Permanent Marker', cursive;
   --font--400: 400;
   --font--200: 200;
   --font--700: 700;
@@ -14,7 +14,7 @@
 }
 
 html {
-  font-family: "Anek Tamil", sans-serif;
+  font-family: 'Anek Tamil', sans-serif;
   background-color: var(--main);
   color: var(--white);
 }
@@ -252,7 +252,7 @@ h3 {
   display: none;
 }
 #portfolio--card::before {
-  content: "Swipe me";
+  content: 'Swipe me';
   font-family: var(--font-drawn);
   font-size: 1rem;
   position: absolute;
@@ -291,7 +291,7 @@ h3 {
   z-index: 1;
 }
 #portfolio--card--1::before {
-  content: "Swipe me";
+  content: 'Swipe me';
   font-family: var(--font-drawn);
   font-size: 1rem;
   position: absolute;
@@ -329,7 +329,7 @@ h3 {
   /* z-index: 1; */
 }
 #portfolio--card--2::before {
-  content: "Swipe me";
+  content: 'Swipe me';
   font-family: var(--font-drawn);
   font-size: 1rem;
   position: absolute;
@@ -357,7 +357,7 @@ h3 {
   z-index: 50;
 }
 .read--more::before {
-  content: "";
+  content: '';
   border: 1px solid var(--accent);
   width: 200%;
   height: 290px;
@@ -554,9 +554,10 @@ h3 {
   margin-top: 0;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 .oppedal::after {
-  content: "";
+  content: '';
   background-image: url(img/ContactMe.svg);
   background-repeat: no-repeat;
 
@@ -602,6 +603,21 @@ h3 {
 }
 
 .bottom > h1 {
+  color: var(--main);
+}
+.contact--modal {
+  grid-row: 2/4;
+  grid-column: 1/4;
+  background-color: var(--accent);
+  height: 10vh;
+  width: min(100vw - 2rem, 600px);
+  margin: auto;
+  border: 1px solid var(--main);
+  z-index: 100;
+  color: var(--white);
+  display: grid;
+  place-content: center;
+  place-items: center;
   color: var(--main);
 }
 

@@ -17,6 +17,8 @@ const projectClose = document.querySelector('.modal--open');
 const projectClose2 = document.querySelector('.modal--open2');
 const projectClose3 = document.querySelector('.modal--open3');
 const openPort = document.querySelector('button');
+const contact = document.querySelector('.bottom');
+const contactModal = document.querySelector('.contact--modal');
 //About me
 bioButton.addEventListener('click', function () {
   aboutMe.classList.add('about--me--mask--clicked');
@@ -62,4 +64,12 @@ projectClose2.addEventListener('click', function () {
 });
 projectClose3.addEventListener('click', function () {
   projectClose3.parentElement?.classList.add('hidden');
+});
+//Copy email address
+contact.addEventListener('click', function () {
+  contactModal.classList.remove('hidden');
+  setTimeout(() => {
+    contactModal.classList.add('hidden');
+  }, 700);
+  navigator.clipboard.writeText('nicholai.oj@gmail.com');
 });
