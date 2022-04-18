@@ -524,6 +524,7 @@ h3 {
   color: var(--white);
   display: grid;
   grid-template-rows: 200px 1fr;
+  position: absolute;
 }
 .modal--portfolio--top {
   grid-row: 1;
