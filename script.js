@@ -38,13 +38,13 @@ bioClose.addEventListener('click', function () {
 });
 
 //Open nav
-openNav.addEventListener('click', function () {
-  navMenu.classList.remove('hidden');
-});
+// openNav.addEventListener('click', function () {
+//   navMenu.classList.remove('hidden');
+// });
 
-navClose.addEventListener('click', function () {
-  navMenu.classList.add('hidden');
-});
+// navClose.addEventListener('click', function () {
+//   navMenu.classList.add('hidden');
+// });
 //Open project modals
 projectOne.addEventListener('click', function () {
   projectOneOpen.classList.remove('hidden');
@@ -73,3 +73,14 @@ contact.addEventListener('click', function () {
   }, 700);
   navigator.clipboard.writeText('nicholai.oj@gmail.com');
 });
+
+//Media query
+
+// const smallDevice = window.matchMedia('(min-width: 800px)');
+
+// function handleDeviceChange(e) {
+//   if (e.matches) {
+//     navMenu.classList.remove('hidden');
+//   } else navMenu.classList.add('hidden');
+// }
+// handleDeviceChange(smallDevice);

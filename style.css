@@ -15,7 +15,10 @@
 
 html {
   font-family: 'Anek Tamil', sans-serif;
-  background-color: var(--main);
+  background: #1c223c;
+  background: -moz-linear-gradient(45deg, #1c223c 0%, #e87449 100%);
+  background: -webkit-linear-gradient(45deg, #1c223c 0%, #e87449 100%);
+  background: linear-gradient(45deg, #1c223c 0%, #e87449 100%);
   color: var(--white);
 }
 /* Typo */
@@ -52,7 +55,21 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 6rem 1fr 1fr 1fr;
   height: 100vh;
-  width: 100vw;
+  width: min(100vw, 800px);
+  margin-inline: auto;
+  background-color: var(--main);
+}
+@media screen and (min-width: 800px) {
+  body {
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+  }
+  .main--container {
+    height: 800px;
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.36);
+  }
 }
 /* Bio */
 .bio {
@@ -72,6 +89,7 @@ h3 {
   cursor: pointer;
   z-index: 95;
 }
+
 .about--me--mask {
   z-index: 1;
   clip-path: circle(0% at 0 0);
@@ -83,7 +101,7 @@ h3 {
   background-color: var(--accent);
 }
 .me--txt {
-  z-index: 2;
+  z-index: 98;
   cursor: pointer;
   background-image: url(img/clickMe.svg);
   background-repeat: no-repeat;
@@ -137,6 +155,34 @@ h3 {
   justify-content: flex-end;
   color: var(--accent);
 }
+@media screen and (min-width: 800px) {
+  .bio--img {
+    left: 20px;
+    top: 20px;
+    background-size: 300px 300px;
+    background-position: -40px;
+    width: 150px;
+    height: 150px;
+  }
+  .me--txt {
+    background-position: 200px 40px;
+  }
+  .about--me--modal {
+    z-index: 97;
+    position: relative;
+    height: 800px;
+    width: 800px;
+  }
+  .about--me--img {
+    background-image: url(img/nicoCover.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    object-fit: cover;
+    height: 200px;
+    width: 800px;
+  }
+}
 /* Navigation */
 .nav {
   cursor: pointer;
@@ -155,6 +201,7 @@ h3 {
   mask-position: 0px 0px;
   z-index: 11;
 }
+
 .nav--open {
   cursor: pointer;
   position: absolute;
@@ -211,7 +258,44 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
+.nav--menu a {
+  color: var(--main);
+}
+@media screen and (min-width: 800px) {
+  .nav {
+    display: none;
+  }
+  .nav--open {
+    display: none;
+  }
+  .nav:hover {
+    background-color: var(--white);
+  }
+  .nav--menu {
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
 
+    justify-content: space-evenly;
+
+    color: var(--accent);
+    grid-row: 1;
+    grid-column: 2/4;
+  }
+  .nav--menu > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 2rem;
+  }
+  .nav--menu a {
+    color: var(--accent);
+  }
+}
 /* Hero / Portfolio */
 .hero {
   grid-area: 2 / 1 / 4 / 4;
@@ -375,27 +459,68 @@ h3 {
   margin-bottom: 0.5rem;
   position: relative;
 }
+@media screen and (min-width: 800px) {
+  .hero {
+    /* overflow-x: unset; */
+    width: 800px;
+    margin-inline: auto;
+    align-items: flex-start;
+    /* margin-bottom: 5rem; */
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+  }
+  #portfolio--card {
+    flex: content;
+    height: 100px;
+    width: 100px;
+  }
+  #portfolio--card--1 {
+    flex: content;
+    height: 100px;
+    width: 100px;
+  }
+  #portfolio--card--2 {
+    height: 100px;
+    flex: content;
+    width: 100px;
+  }
+  #portfolio--card--1::before {
+    content: '';
+  }
+  #portfolio--card--2::before {
+    content: '';
+  }
+  #portfolio--card--2::before {
+    content: '';
+  }
+
+  .read--more {
+    position: absolute;
+    bottom: -180px;
+    z-index: 50;
+    scale: 80%;
+  }
+  .read--more::before {
+    content: '';
+    border: none;
+    width: 150%;
+    height: 290px;
+    position: absolute;
+    left: -50%;
+    bottom: 50%;
+    z-index: -10;
+  }
+}
 /* Portfolio pages */
-/* .modal--portfolio {
-  background-color: var(--main);
-  height: 100vh;
-  width: 100vw;
-  z-index: 100;
-  color: var(--white);
-  overflow: hidden;
-  margin: 0;
-} */
+
 .modal--portfolio {
   background-color: var(--main);
   height: 100vh;
   width: min(100vw, 800px);
-
   z-index: 100;
   color: var(--white);
-  /* overflow: hidden; */
-
   display: grid;
-
   grid-template-rows: 200px 1fr;
 }
 .modal--portfolio--top {
