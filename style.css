@@ -388,13 +388,14 @@ h3 {
 .modal--portfolio {
   background-color: var(--main);
   height: 100vh;
-  width: min(100vw, 600px);
-  margin-inline: auto;
+  width: min(100vw, 800px);
+
   z-index: 100;
   color: var(--white);
   /* overflow: hidden; */
 
   display: grid;
+
   grid-template-rows: 200px 1fr;
 }
 .modal--portfolio--top {
