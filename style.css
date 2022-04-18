@@ -332,6 +332,10 @@ h3 {
   .swipe {
     display: none;
   }
+  .hero {
+    overflow-x: none;
+    overflow: hidden;
+  }
 }
 /* Card 1 */
 #portfolio--card {
@@ -470,16 +474,19 @@ h3 {
     padding: 1rem;
   }
   #portfolio--card {
+    scroll-snap-align: unset;
     flex: content;
     height: 100px;
     width: 100px;
   }
   #portfolio--card--1 {
+    scroll-snap-align: unset;
     flex: content;
     height: 100px;
     width: 100px;
   }
   #portfolio--card--2 {
+    scroll-snap-align: unset;
     height: 100px;
     flex: content;
     width: 100px;
