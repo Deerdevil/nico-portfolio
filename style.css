@@ -101,7 +101,7 @@ h3 {
   background-color: var(--accent);
 }
 .me--txt {
-  z-index: 98;
+  z-index: 89;
   cursor: pointer;
   background-image: url(img/clickMe.svg);
   background-repeat: no-repeat;
@@ -111,7 +111,7 @@ h3 {
 }
 
 .about--me--modal {
-  z-index: 1;
+  z-index: 90;
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -166,12 +166,15 @@ h3 {
   }
   .me--txt {
     background-position: 200px 40px;
+    z-index: 96f;
   }
   .about--me--modal {
     z-index: 97;
-    position: relative;
+    /* position: relative; */
     height: 800px;
     width: 800px;
+    padding-right: 5rem;
+    padding-left: 5rem;
   }
   .about--me--img {
     background-image: url(img/nicoCover.png);
@@ -184,7 +187,7 @@ h3 {
   }
 }
 /* Navigation */
-.nav {
+/* .nav {
   cursor: pointer;
   position: absolute;
   top: 10px;
@@ -200,9 +203,9 @@ h3 {
   -webkit-mask-position: 0px 0px;
   mask-position: 0px 0px;
   z-index: 11;
-}
+} */
 
-.nav--open {
+/* .nav--open {
   cursor: pointer;
   position: absolute;
   top: 15px;
@@ -220,7 +223,7 @@ h3 {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 0px 0px;
   z-index: 100;
-}
+} */
 .bio--open {
   /* X on the modal */
   cursor: pointer;
@@ -261,7 +264,7 @@ h3 {
 .nav--menu a {
   color: var(--main);
 }
-@media screen and (min-width: 800px) {
+/* @media screen and (min-width: 800px) {
   .nav {
     display: none;
   }
@@ -295,7 +298,7 @@ h3 {
   .nav--menu a {
     color: var(--accent);
   }
-}
+} */
 /* Hero / Portfolio */
 .hero {
   grid-area: 2 / 1 / 4 / 4;
@@ -313,7 +316,24 @@ h3 {
 .hero::-webkit-scrollbar {
   display: none;
 }
-
+.swipe {
+  grid-area: 2/1/4/4;
+  display: grid;
+  align-items: top;
+  justify-content: flex-end;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .swipe {
+    margin-right: 8rem;
+  }
+}
+@media screen and (min-width: 800px) {
+  .swipe {
+    display: none;
+  }
+}
 /* Card 1 */
 #portfolio--card {
   /* border: 1px solid var(--accent); */
@@ -335,17 +355,7 @@ h3 {
 #portfolio--card::-webkit-scrollbar {
   display: none;
 }
-#portfolio--card::before {
-  content: 'Swipe me';
-  font-family: var(--font-drawn);
-  font-size: 1rem;
-  position: absolute;
-  /* transform: rotate(-90deg); */
-  top: -20px;
-  /* left: 30px; */
-  color: var(--accent);
-  z-index: -10;
-}
+
 #portfolio--card p {
   margin-bottom: 2rem;
   font-size: 1.2rem;
@@ -374,17 +384,7 @@ h3 {
   /* border: 1px solid var(--accent); */
   z-index: 1;
 }
-#portfolio--card--1::before {
-  content: 'Swipe me';
-  font-family: var(--font-drawn);
-  font-size: 1rem;
-  position: absolute;
-  /* transform: rotate(-90deg); */
-  top: -20px;
-  /* left: 30px; */
-  color: var(--accent);
-  z-index: -10;
-}
+
 #portfolio--card--1 p {
   margin-bottom: 2rem;
   font-size: 1.2rem;
@@ -412,17 +412,7 @@ h3 {
   /* border: 1px solid var(--accent); */
   /* z-index: 1; */
 }
-#portfolio--card--2::before {
-  content: 'Swipe me';
-  font-family: var(--font-drawn);
-  font-size: 1rem;
-  position: absolute;
-  /* transform: rotate(-90deg); */
-  top: -20px;
-  /* left: 30px; */
-  color: var(--accent);
-  z-index: -10;
-}
+
 #portfolio--card--2 p {
   margin-bottom: 2rem;
   font-size: 1.2rem;
@@ -461,14 +451,13 @@ h3 {
 }
 @media screen and (min-width: 800px) {
   .hero {
-    /* overflow-x: unset; */
     width: 800px;
-    margin-inline: auto;
     align-items: flex-start;
-    /* margin-bottom: 5rem; */
     margin-top: 8rem;
     display: flex;
+    gap: 0;
     justify-content: center;
+    padding: 1rem;
   }
   #portfolio--card {
     flex: content;
@@ -518,7 +507,7 @@ h3 {
   background-color: var(--main);
   height: 100vh;
   width: min(100vw, 800px);
-  z-index: 100;
+  z-index: 99;
   color: var(--white);
   display: grid;
   grid-template-rows: 200px 1fr;
@@ -631,6 +620,34 @@ h3 {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: 0px 0px;
   z-index: 100;
+}
+@media screen and (min-width: 800px) {
+  .modal--portfolio {
+    height: 800px;
+    width: 800px;
+    position: relative;
+  }
+  .modal--portfolio--image1 {
+    background-position: 0 -133px;
+  }
+  .modal--portfolio--image2 {
+    background-position: 0 -270px;
+  }
+  .modal--portfolio--image3 {
+    background-position: 0 -100px;
+  }
+  .modal--open {
+    top: 9px;
+    right: -8px;
+  }
+  .modal--open2 {
+    top: 9px;
+    right: -8px;
+  }
+  .modal--open3 {
+    top: 9px;
+    right: -8px;
+  }
 }
 /* Project specific */
 .portfolio--img--1 {
