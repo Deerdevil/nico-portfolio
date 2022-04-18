@@ -9,10 +9,13 @@ const navClose = document.querySelector(".nav--open");
 const hero = document.querySelector(".read--more");
 const projectOne = document.querySelector(".project--one");
 const projectTwo = document.querySelector(".project--two");
+const projectThree = document.querySelector(".project--three");
 const projectOneOpen = document.getElementById("project--one");
 const projectTwoOpen = document.getElementById("project--two");
 const projectThreeOpen = document.getElementById("project--three");
 const projectClose = document.querySelector(".modal--open");
+const projectClose2 = document.querySelector(".modal--open2");
+const projectClose3 = document.querySelector(".modal--open3");
 const openPort = document.querySelector("button");
 //About me
 bioButton.addEventListener("click", function () {
@@ -49,10 +52,22 @@ projectOne.addEventListener("click", function () {
 projectTwo.addEventListener("click", function () {
   projectTwoOpen.classList.remove("hidden");
 });
+projectThree.addEventListener("click", function () {
+  projectThreeOpen.classList.remove("hidden");
+});
 // projectTwo.addEventListener("click", function () {
 //   projectTwoOpen.classList.remove("hidden");
 // });
 
-projectClose.addEventListener("click", function () {
+projectClose.addEventListener("click", function (e) {
   projectClose.parentElement?.classList.add("hidden");
+  console.log(e);
+});
+projectClose2.addEventListener("click", function (e) {
+  projectClose2.parentElement?.classList.add("hidden");
+  console.log(e);
+});
+projectClose3.addEventListener("click", function (e) {
+  projectClose3.parentElement?.classList.add("hidden");
+  console.log(e);
 });
