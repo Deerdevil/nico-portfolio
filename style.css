@@ -486,13 +486,23 @@ h3 {
 .portfolio--img img {
   border: 1px solid var(--accent);
   object-fit: fill;
-  height: 130px;
+  height: 150px;
   aspect-ratio: 16/9;
   width: 200px;
   margin-bottom: 0.5rem;
   position: relative;
 }
 @media screen and (min-width: 800px) {
+  .portfolio--img img {
+    border: 1px solid var(--accent);
+    object-fit: fill;
+    height: 130px;
+    aspect-ratio: 16/9;
+    width: 200px;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
   .hero {
     width: 800px;
     align-items: flex-start;
@@ -557,6 +567,10 @@ h3 {
     background-image: unset;
     background-repeat: no-repeat;
     background-position: 150px 0;
+  }
+  .read--more:hover {
+    background-color: var(--main);
+    color: var(--accent);
   }
 }
 /* Portfolio pages */
